@@ -131,9 +131,16 @@
   }
   .servicio-card:hover { box-shadow: 0 8px 32px rgba(91,45,142,0.12); transform: translateY(-2px); }
   .servicio-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--morado); }
-  .servicio-icono { font-size: 2rem; margin-bottom: 14px; }
+  .servicio-icono { margin-bottom: 16px; display: flex; align-items: center; }
+  .servicio-icono svg { width: 34px; height: 34px; stroke: #5B2D8E; }
   .servicio-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--texto); margin-bottom: 8px; }
   .servicio-card p { font-size: 14px; color: var(--texto-suave); }
+  .servicio-card { display: flex; flex-direction: column; }
+  .servicio-meta { list-style: none; margin: 16px 0 20px; padding: 0; }
+  .servicio-meta li { font-size: 13px; color: var(--texto-suave); padding: 7px 0; border-top: 1px solid var(--borde); display: flex; gap: 8px; }
+  .servicio-meta li strong { color: var(--texto); font-weight: 600; white-space: nowrap; }
+  .servicio-cta { margin-top: auto; display: inline-block; text-align: center; border: 1.5px solid var(--morado); color: var(--morado); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 13px; transition: all 0.2s; }
+  .servicio-cta:hover { background: var(--morado); color: #FFF; }
 
   /* CONTACTO */
   .contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
@@ -611,7 +618,7 @@
     </div>
     
     <div style="background: var(--blanco); border: 2px solid var(--morado); border-radius: 8px; padding: 24px; text-align: center; box-shadow: 0 8px 32px rgba(91,45,142,0.12);">
-      <div style="font-size: 4rem; margin-bottom: 16px;">📄</div>
+      <div style="margin-bottom: 16px; display: flex; justify-content: center;"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#5B2D8E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
       <h3 style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--morado); margin-bottom: 12px;">Documento PDF Premium</h3>
       <p style="font-size: 13px; color: var(--texto-suave); margin-bottom: 20px;">Diseño profesional, estructura clara, tablas analíticas, identidad visual consistente.</p>
       <!-- PDF enviado por WhatsApp después de reservar la sesión -->
@@ -630,26 +637,63 @@
   <h2 class="seccion-titulo">Otros servicios</h2>
   <p class="seccion-intro">Acompañamiento profesional en distintos formatos.</p>
   <div class="servicios-grid">
+
     <div class="servicio-card">
-      <div class="servicio-icono">🎤</div>
+      <div class="servicio-icono">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#5B2D8E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+      </div>
       <h3>Conferencias y talleres</h3>
-      <p>Charlas y talleres para empresas, universidades y grupos. Temas: criterio estratégico, marca personal, IA aplicada.</p>
+      <p>Charlas diseñadas a la medida para empresas, universidades y grupos profesionales. Contenido con base en investigación, ejemplos reales del mercado mexicano y dinámicas que convierten la audiencia en participantes activos. Temas: criterio estratégico, marca personal e IA aplicada al trabajo profesional.</p>
+      <ul class="servicio-meta">
+        <li><strong>Formato:</strong> Presencial o virtual</li>
+        <li><strong>Duración:</strong> 60 a 120 minutos</li>
+        <li><strong>Ideal para:</strong> Empresas, universidades y eventos profesionales</li>
+      </ul>
+      <a href="https://wa.me/524423620003?text=Hola%20Claudia,%20me%20interesa%20cotizar%20una%20conferencia%20o%20taller%20para%20mi%20organizaci%C3%B3n." target="_blank" class="servicio-cta">Cotizar conferencia →</a>
     </div>
+
     <div class="servicio-card">
-      <div class="servicio-icono">📚</div>
+      <div class="servicio-icono">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#5B2D8E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
       <h3>Workshops corporativos</h3>
-      <p>Para equipos internos, innovación y toma de decisiones estratégicas. Espacios diseñados para que tu organización fortalezca su criterio colectivo y acelere decisiones críticas.</p>
+      <p>Sesiones intensivas para equipos internos enfocadas en innovación y toma de decisiones estratégicas. Trabajamos sobre casos reales de tu organización — no ejercicios genéricos — para que el equipo fortalezca su criterio colectivo, alinee prioridades y acelere decisiones críticas que hoy están detenidas.</p>
+      <ul class="servicio-meta">
+        <li><strong>Formato:</strong> Presencial, grupos de 6 a 25 personas</li>
+        <li><strong>Duración:</strong> Media jornada o jornada completa</li>
+        <li><strong>Ideal para:</strong> Equipos directivos, áreas de innovación y PyMES en crecimiento</li>
+      </ul>
+      <a href="https://wa.me/524423620003?text=Hola%20Claudia,%20me%20interesa%20un%20workshop%20corporativo%20para%20mi%20equipo." target="_blank" class="servicio-cta">Solicitar propuesta →</a>
     </div>
+
     <div class="servicio-card">
-      <div class="servicio-icono">🤖</div>
+      <div class="servicio-icono">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#5B2D8E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+      </div>
       <h3>IA aplicada a educación</h3>
-      <p>Consultoría sobre implementación de inteligencia artificial en procesos educativos y creativos.</p>
+      <p>Consultoría para instituciones educativas y equipos creativos que quieren integrar inteligencia artificial con criterio, no por moda. Desde diagnóstico de procesos hasta diseño de flujos de trabajo con IA, capacitación docente y políticas de uso responsable. Con experiencia real en aula universitaria.</p>
+      <ul class="servicio-meta">
+        <li><strong>Formato:</strong> Consultoría por proyecto o capacitación</li>
+        <li><strong>Duración:</strong> Desde sesiones únicas hasta programas de varias semanas</li>
+        <li><strong>Ideal para:</strong> Universidades, escuelas y equipos creativos</li>
+      </ul>
+      <a href="https://wa.me/524423620003?text=Hola%20Claudia,%20me%20interesa%20la%20consultor%C3%ADa%20de%20IA%20aplicada%20a%20educaci%C3%B3n." target="_blank" class="servicio-cta">Agendar diagnóstico →</a>
     </div>
+
     <div class="servicio-card">
-      <div class="servicio-icono">🔍</div>
+      <div class="servicio-icono">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#5B2D8E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
       <h3>Investigación y consultoría</h3>
-      <p>Especialista en diseño de marketing, innovación, emprendimiento, UX y diseño emocional. Investigación estratégica para empresas, startups y profesionistas que buscan entender sus mercados con profundidad.</p>
+      <p>Investigación estratégica para empresas, startups y profesionistas que necesitan entender sus mercados con profundidad antes de invertir. Especialidad en diseño de marketing, innovación, emprendimiento, UX y diseño emocional: desde estudios de usuario hasta diagnósticos de marca y posicionamiento.</p>
+      <ul class="servicio-meta">
+        <li><strong>Formato:</strong> Proyecto a la medida, con entregable documentado</li>
+        <li><strong>Duración:</strong> De 2 a 8 semanas según alcance</li>
+        <li><strong>Ideal para:</strong> Startups, PyMES y marcas en redefinición</li>
+      </ul>
+      <a href="https://wa.me/524423620003?text=Hola%20Claudia,%20me%20interesa%20un%20proyecto%20de%20investigaci%C3%B3n%20o%20consultor%C3%ADa%20estrat%C3%A9gica." target="_blank" class="servicio-cta">Platicar mi proyecto →</a>
     </div>
+
   </div>
 </section>
 
@@ -696,9 +740,9 @@
     <div class="contacto-intro">
       <p>¿Estás atorado en una decisión? ¿Necesitas claridad para avanzar? Cuéntame tu caso y agendamos tu sesión de criterio.</p>
       <p style="margin-top:16px;font-size:0.95rem;font-weight:600;color:var(--morado);">Cada sesión concluye con un documento profesional diseñado especialmente para ti — no solo un resumen de notas, sino un análisis estratégico que puedes compartir con tu equipo.</p>
-      <div class="contacto-dato" style="margin-top:32px;">✉️ <a href="mailto:hola@claudiamartinezdiaz.mx">hola@claudiamartinezdiaz.mx</a></div>
-      <div class="contacto-dato">💼 <a href="https://www.linkedin.com/in/claudiamtzd" target="_blank">linkedin.com/in/claudiamtzd</a></div>
-      <div class="contacto-dato">📱 <a href="https://wa.me/524423620003" target="_blank">WhatsApp: (442) 362-0003</a></div>
+      <div class="contacto-dato" style="margin-top:32px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5B2D8E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px; margin-right:9px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:hola@claudiamartinezdiaz.mx">hola@claudiamartinezdiaz.mx</a></div>
+      <div class="contacto-dato"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5B2D8E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px; margin-right:9px;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><a href="https://www.linkedin.com/in/claudiamtzd" target="_blank">linkedin.com/in/claudiamtzd</a></div>
+      <div class="contacto-dato"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5B2D8E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px; margin-right:9px;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg><a href="https://wa.me/524423620003" target="_blank">WhatsApp: (442) 362-0003</a></div>
     </div>
     <div class="contacto-form">
       <p style="font-size: 14px; color: var(--texto-suave); margin-bottom: 20px;">Reserva tu sesión directamente por WhatsApp. Respondo en menos de 2 horas.</p>
